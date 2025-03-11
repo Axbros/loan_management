@@ -5,6 +5,7 @@
     class="el-menu-vertical-demo"
     @open="handleOpen"
     @close="handleClose"
+    
   >
     <template v-for="item in menu" :key="item.index">
       <el-sub-menu v-if="item.children" :index="item.index">
@@ -399,3 +400,7 @@ const menu = ref([
   }
 ])
 </script>
+
+<style scoped>
+
+</style>
