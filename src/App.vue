@@ -19,11 +19,7 @@
                 <RouterView />
               </div>
             </el-main>
-            <el-footer>
-              <BaseFooter/>
-            </el-footer>
           </el-container>
-
         </div>
       </el-container>
     </el-container>
@@ -44,4 +40,5 @@ import { RouterView } from 'vue-router'
 .main-container {
   height: calc(100vh - var(--ep-menu-item-height) - 4px);
 }
+
 </style>

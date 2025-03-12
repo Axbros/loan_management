@@ -64,7 +64,7 @@ function handleClose(key: string, keyPath: string[]) {
 
 const menu = ref([
   {
-    index:'/dashboard',
+    index:'/',
     title: '首页',
     icon:markRaw(HomeFilled),
   },
