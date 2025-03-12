@@ -69,16 +69,16 @@ const menu = ref([
     icon:markRaw(HomeFilled),
   },
   {
-    index: '/user_management',
+    index: '/UserManagement',
     title: '用户管理',
     icon: markRaw(Location),
     children: [
       {
-        index: '/user_management/user_info',
+        index: '/UserManagement/UserInfo',
         title: '用户信息',
       },
       {
-        index: '/user_management/blacklist',
+        index: '/UserManagement/BlackList',
         title: '黑名单信息',
       },
     ],
