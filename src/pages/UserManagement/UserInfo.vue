@@ -21,8 +21,7 @@
             <div class="select-group">
                 <el-row :gutter="20">
                     <el-col :span="6">
-                        <CustomSelect  label="用户状态" v-model="formInline.user_status"
-                            :options="userStatusOptions" />
+                        <CustomSelect label="用户状态" v-model="formInline.user_status" :options="userStatusOptions" />
                     </el-col>
                     <el-col :span="6">
                         <CustomSelect label="用户来源" v-model="formInline.user_from" :options="userFromOptions" />
@@ -47,6 +46,37 @@
                 <el-button @click="resetForm">重置</el-button>
             </el-form-item>
         </el-form>
+    </el-card>
+    <el-card style="margin-top:20px">
+        <el-table :data="tableData" style="width: 100%" fit >
+            <el-table-column fixed prop="username" label="姓名" width="120" />
+            <el-table-column prop="idcard" label="证件号码" width="200" />
+            <el-table-column prop="mobile" label="手机号码" width="150" />
+            <el-table-column prop="bank_card" label="银行卡号码" width="200" />
+            <el-table-column prop="user_status" label="用户状态" width="100" >
+                <template #default="scoped">
+                    <el-tag v-if="scoped.row.user_status === 0 " type="success">正常</el-tag>
+                    <el-tag v-else type="danger">异常</el-tag>
+                </template>
+                </el-table-column>
+            <el-table-column prop="user_from" label="用户来源" width="120" />
+            <el-table-column prop="user_client" label="注册终端" width="120" >
+                <template #default="scoped">
+                    <el-tag v-if="scoped.row.user_client === 'ios'" type="success">IOS</el-tag>
+                    <el-tag v-else type="primary">Android</el-tag>
+                    </template>
+                </el-table-column>
+            <el-table-column prop="device_type" label="设备类型" width="120" />
+            <el-table-column prop="register_date" label="注册时间" width="120" />
+            <el-table-column fixed="right" label="操作" min-width="120">
+                <template #default>
+                    <el-button link type="primary" size="small" @click="handleClick">
+                        详情
+                    </el-button>
+                    <el-button link type="primary" size="small">编辑</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
     </el-card>
 </template>
 
@@ -95,6 +125,47 @@ const onSubmit = () => {
 const resetForm = () => {
     Object.assign(formInline, initialForm)
 }
+
+
+const handleClick = () => {
+    console.log('click')
+}
+
+const tableData = [
+    {
+        username: "张三",
+        idcard: "232327198005697598",
+        mobile: "13518248875",
+        user_status: 0,
+        user_from: "安逸花",
+        user_client: "ios",
+        device_type: "IPhone 15 Pro",
+        bank_card: "6230943690000330652",
+        register_date: "2025-03-01"
+    },
+    {
+        username: "李四",
+        idcard: "232327198005697598",
+        mobile: "13518248875",
+        user_status: 0,
+        user_from: "安逸花",
+        user_client: "android",
+        device_type: "IPhone 15 Pro",
+        bank_card: "6230943690000330652",
+        register_date: "2025-03-01"
+    },
+    {
+        username: "王五",
+        idcard: "232327198005697598",
+        mobile: "13518248875",
+        user_status: 1,
+        user_from: "安逸花",
+        user_client: "android",
+        device_type: "IPhone 15 Pro",
+        bank_card: "6230943690000330652",
+        register_date: "2025-03-01"
+    },
+]
 </script>
 
 <style scoped>

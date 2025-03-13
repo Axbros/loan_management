@@ -39,6 +39,7 @@ import { RouterView } from 'vue-router'
 
 .main-container {
   height: calc(100vh - var(--ep-menu-item-height) - 4px);
+  width: 100%;
 }
 
 </style>
