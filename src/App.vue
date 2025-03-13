@@ -42,4 +42,8 @@ import { RouterView } from 'vue-router'
   width: 100%;
 }
 
+.ep-header{
+  --ep-header-height: auto;
+}
+
 </style>

@@ -3,18 +3,28 @@
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
             <!-- 输入框部分 -->
             <div class="input-group">
-                <el-form-item label="真实姓名">
-                    <el-input v-model="formInline.username" placeholder="姓名" clearable />
-                </el-form-item>
-                <el-form-item label="证件号码">
-                    <el-input v-model="formInline.idcard" placeholder="身份证号码" clearable />
-                </el-form-item>
-                <el-form-item label="手机号码">
-                    <el-input v-model="formInline.mobile" placeholder="手机号码" clearable />
-                </el-form-item>
-                <el-form-item label="银行卡尾号">
-                    <el-input v-model="formInline.bank_card" placeholder="银行卡后六位" clearable />
-                </el-form-item>
+                <el-row :gutter="20">
+                    <el-col :span="6">
+                        <el-form-item label="真实姓名">
+                            <el-input v-model="formInline.username" placeholder="姓名" clearable />
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="6">
+                        <el-form-item label="证件号码">
+                            <el-input v-model="formInline.idcard" placeholder="身份证号码" clearable/>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="6">
+                        <el-form-item label="手机号码">
+                            <el-input v-model="formInline.mobile" placeholder="手机号码" clearable />
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="6">
+                        <el-form-item label="银行卡号">
+                            <el-input v-model="formInline.bank_card" placeholder="银行卡号码" clearable/>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
             </div>
 
             <!-- 下拉选择框部分 -->
@@ -48,24 +58,24 @@
         </el-form>
     </el-card>
     <el-card style="margin-top:20px">
-        <el-table :data="tableData" style="width: 100%" fit >
+        <el-table :data="tableData" style="width: 100%" fit>
             <el-table-column fixed prop="username" label="姓名" width="120" />
             <el-table-column prop="idcard" label="证件号码" width="200" />
             <el-table-column prop="mobile" label="手机号码" width="150" />
             <el-table-column prop="bank_card" label="银行卡号码" width="200" />
-            <el-table-column prop="user_status" label="用户状态" width="100" >
+            <el-table-column prop="user_status" label="用户状态" width="100">
                 <template #default="scoped">
-                    <el-tag v-if="scoped.row.user_status === 0 " type="success">正常</el-tag>
+                    <el-tag v-if="scoped.row.user_status === 0" type="success">正常</el-tag>
                     <el-tag v-else type="danger">异常</el-tag>
                 </template>
-                </el-table-column>
+            </el-table-column>
             <el-table-column prop="user_from" label="用户来源" width="120" />
-            <el-table-column prop="user_client" label="注册终端" width="120" >
+            <el-table-column prop="user_client" label="注册终端" width="120">
                 <template #default="scoped">
                     <el-tag v-if="scoped.row.user_client === 'ios'" type="success">IOS</el-tag>
                     <el-tag v-else type="primary">Android</el-tag>
-                    </template>
-                </el-table-column>
+                </template>
+            </el-table-column>
             <el-table-column prop="device_type" label="设备类型" width="120" />
             <el-table-column prop="register_date" label="注册时间" width="120" />
             <el-table-column fixed="right" label="操作" min-width="120">
@@ -169,28 +179,8 @@ const tableData = [
 </script>
 
 <style scoped>
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.select-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.select-group .el-form-item {
-    width: 10vw;
-}
 
-.el-form-item {
-    flex: 1;
-    min-width: 200px;
-}
 
-.select {
-    width: 10vw;
-}
 </style>
