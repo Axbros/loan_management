@@ -10,31 +10,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # Step 4: Build the project
       - name: Build project
         run: npm run build
 
+      # Step 5: Set up SSH known hosts (to avoid "host key verification failed")
+      - name: Set up SSH known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      # Step 6: Deploy to server using SSH action
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          disable-known-hosts: true
           script: |
             # 在服务器上创建目标目录（如果不存在）
             mkdir -p /www/wwwroot/loan.flbxw.cn
             # 清空目标目录内容
             rm -rf /www/wwwroot/loan.flbxw.cn/*
-            # 上传 dist 目录内容到服务器
-            scp -r $GITHUB_WORKSPACE/dist/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/www/wwwroot/loan.flbxw.cn/
+            # 将 dist 目录内容上传到服务器
+            rsync -avz --delete $GITHUB_WORKSPACE/dist/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/www/wwwroot/loan.flbxw.cn/
+
