@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to Tencent Cloud Server
 
 on:
   push:
@@ -6,22 +6,34 @@ on:
       - main
 
 jobs:
-  typecheck:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          run_install: true
-
-      - name: Use Node.js LTS
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
-          registry-url: https://registry.npmjs.org/
-          cache: pnpm
+          node-version: 18
 
-      - name: Type Check
-        run: npm run typecheck
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v0.9.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            # 在服务器上创建目标目录（如果不存在）
+            mkdir -p /www/wwwroot/loan.flbxw.cn
+            # 清空目标目录内容
+            rm -rf /www/wwwroot/loan.flbxw.cn/*
+            # 上传 dist 目录内容到服务器
+            scp -r $GITHUB_WORKSPACE/dist/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/www/wwwroot/loan.flbxw.cn/
