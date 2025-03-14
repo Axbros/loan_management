@@ -30,6 +30,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          disable-known-hosts: true
           script: |
             # 在服务器上创建目标目录（如果不存在）
             mkdir -p /www/wwwroot/loan.flbxw.cn
