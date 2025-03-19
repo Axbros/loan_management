@@ -97,40 +97,18 @@
                     <template #extra>
                         <el-button type="primary">修改订单金额</el-button>
                     </template>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
-
-                                審核結果
-                            </div>
-                        </template>
+                    <el-descriptions-item label="審核結果">
                         <el-tag type="success">通過</el-tag>
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
-
-                                機審分值
-                            </div>
-                        </template>
+                    <el-descriptions-item label="機審分值">
                         0
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
-
+                    <el-descriptions-item label="
                                 機審時間
-                            </div>
-                        </template>
+                            ">
                         2025-03-01 12:00:00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
-
-                                備注
-                            </div>
-                        </template>
+                    <el-descriptions-item label="備注">
                         T（1、4、7）逾期笔数过多
                     </el-descriptions-item>
 
@@ -138,283 +116,191 @@
 
                 <el-descriptions class="margin-top" title="本次借款信息" :column="4" border>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
-
-                                借款人姓名
-                            </div>
-                        </template>
+                    <el-descriptions-item label="借款人姓名
+">
                         孔建雲
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 借款金額（元）
-                            </div>
-                        </template>
+                            ">
                         3000.00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 借款週期（天）
-                            </div>
-                        </template>
+                            ">
                         5
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 申請時間
-                            </div>
-                        </template>
+                            ">
                         2025-03-01 12:00:00
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 貸款類型
-                            </div>
-                        </template>
+                            ">
                         首貸
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 借款利息（元）
-                            </div>
-                        </template>
+                            ">
                         1500.00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 加款金額（元）
-                            </div>
-                        </template>
+                            ">
                         1500.00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 放款時間
-                            </div>
-                        </template>
+                            ">
                         2025-03-01 12:00:00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 剩餘應還（元）
-                            </div>
-                        </template>
+                            ">
                         --
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 應還時間
-                            </div>
-                        </template>
+                            ">
                         2025-03-08 12:00:00
                     </el-descriptions-item>
                 </el-descriptions>
             </el-tab-pane>
             <el-tab-pane label="用戶資料">
                 <el-descriptions class="margin-top" title="註冊信息" :column="3" border>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 註冊手機號
-                            </div>
-                        </template>
+                            ">
                         18002388777
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 註冊時間
-                            </div>
-                        </template>
+                            ">
                         2025年3月18日 11:00:00
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 註冊客戶端
-                            </div>
-                        </template>
+                            ">
                         H5
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 註冊渠道
-                            </div>
-                        </template>
+                            ">
                         湖人-木木分期
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 註冊經緯度
-                            </div>
-                        </template>
+                            ">
                         31.123456,121.123456
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 借款經緯度
-                            </div>
-                        </template>
+                            ">
                         31.123456,121.123456
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 居住地
-                            </div>
-                        </template>
+                            ">
                         四川省成都市邛崍市文君街道英倫半島
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 註冊所在地
-                            </div>
-                        </template>
+                            ">
                         四川省成都市邛崍市文君街道英倫半島
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 借款所在地
-                            </div>
-                        </template>
+                            ">
                         四川省成都市邛崍市文君街道英倫半島
                     </el-descriptions-item>
                 </el-descriptions>
 
 
                 <el-descriptions class="margin-top" title="實名信息" :column="3" border>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 真實姓名
-                            </div>
-                        </template>
+                            ">
                         劉鑫
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 身分證號
-                            </div>
-                        </template>
+                            ">
                         232327198005697598
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 性別
-                            </div>
-                        </template>
+                            ">
                         男
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 年齡
-                            </div>
-                        </template>
+                            ">
                         45
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 身分證頭像面
-                            </div>
-                        </template>
-                        31.123456,121.123456
+                            ">
+                        <el-image style="width: 158px; height: 100px" :src="idcards[0]" :zoom-rate="1.2" :max-scale="7"
+                            :min-scale="0.2" show-progress :initial-index="4" :preview-src-list="idcards" fit="cover" />
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 身分證國徽面
-                            </div>
-                        </template>
-                        31.123456,121.123456
+                            ">
+                        <el-image style="width: 158px; height: 100px" :src="idcards[1]" :zoom-rate="1.2" :max-scale="7"
+                            :min-scale="0.2" show-progress :initial-index="4" :preview-src-list="idcards" fit="cover" />
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 活體檢測照片
-                            </div>
-                        </template>
-                        四川省成都市邛崍市文君街道英倫半島
+                            ">
+                        <el-image style="width: 158px; height: 100px" :src="idcards[2]" :zoom-rate="1.2" :max-scale="7"
+                            :min-scale="0.2" show-progress :initial-index="4" :preview-src-list="idcards" fit="cover" />
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 運營商來源
-                            </div>
-                        </template>
+                            ">
                         未授權
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 客戶來源
-                            </div>
-                        </template>
+                            ">
                         http://eeee.one
                     </el-descriptions-item>
 
                 </el-descriptions>
 
                 <el-descriptions class="margin-top" title="銀行卡信息" :column="3" border>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 開戶銀行
-                            </div>
-                        </template>
+                            ">
                         中國工商銀行
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 銀行卡號
-                            </div>
-                        </template>
+                            ">
                         6230943690000330652
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 銀行預留手機號
-                            </div>
-                        </template>
+                            ">
                         18002388777
                     </el-descriptions-item>
 
@@ -424,29 +310,20 @@
                 </el-descriptions>
 
                 <el-descriptions class="margin-top" title="單位信息" :column="3" border>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 單位名稱
-                            </div>
-                        </template>
+                            ">
                         四川省高級人民法院
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 單位電話
-                            </div>
-                        </template>
+                            ">
                         028-12345678
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 單位地址
-                            </div>
-                        </template>
+                            ">
                         四川省成都市武侯區辛康路56號
                     </el-descriptions-item>
 
@@ -456,81 +333,54 @@
                 </el-descriptions>
 
                 <el-descriptions class="margin-top" title="緊急聯繫人" :column="3" border>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 關係
-                            </div>
-                        </template>
+                            ">
                         朋友
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 姓名
-                            </div>
-                        </template>
+                            ">
                         蔡徐坤
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 電話
-                            </div>
-                        </template>
+                            ">
                         18002388777
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 關係
-                            </div>
-                        </template>
+                            ">
                         家人
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 姓名
-                            </div>
-                        </template>
+                            ">
                         張學友
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 電話
-                            </div>
-                        </template>
+                            ">
                         18002388777
                     </el-descriptions-item>
 
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 關係
-                            </div>
-                        </template>
+                            ">
                         同事
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
 
                                 姓名
-                            </div>
-                        </template>
+                            ">
                         梁靜茹
                     </el-descriptions-item>
-                    <el-descriptions-item>
-                        <template #label>
-                            <div class="cell-item">
+                    <el-descriptions-item label="
                                 電話
-                            </div>
-                        </template>
+                            ">
                         18002388777
                     </el-descriptions-item>
 
@@ -540,7 +390,7 @@
             <el-tab-pane label="通訊錄">
                 <el-button type="primary">導出</el-button>
                 <div style="display: flex;justify-content:center;margin-top:20px;">
-                    <el-table :data="contactData">
+                    <el-table :data="contactData" align="center" header-align="center" stripe>
                         <el-table-column prop="name" label="姓名" />
                         <el-table-column prop="mobile" label="電話" />
                     </el-table>
@@ -549,7 +399,7 @@
 
             </el-tab-pane>
             <el-tab-pane label="短信紀錄">
-                <el-table :data="smsData">
+                <el-table :data="smsData" align="center" stripe>
                     <el-table-column prop="time" label="時間" />
                     <el-table-column prop="mobile" label="電話" />
                     <el-table-column prop="content" label="內容" />
@@ -562,7 +412,7 @@
                 </el-table>
             </el-tab-pane>
             <el-tab-pane label="通話紀錄">
-                <el-table :data="callLogData">
+                <el-table :data="callLogData" align="center" stripe>
                     <el-table-column prop="name" label="姓名" />
                     <el-table-column prop="mobile" label="電話" />
                     <el-table-column prop="type" label="類型">
@@ -578,8 +428,48 @@
                     <el-table-column prop="end_time" label="結束時間" />
                 </el-table>
             </el-tab-pane>
-            <el-tab-pane label="設備信息">設備信息</el-tab-pane>
-            <el-tab-pane label="運營商報告">運營商報告</el-tab-pane>
+            <el-tab-pane label="設備信息">
+                <el-descriptions class="margin-top" title="系統信息" :column="4" border>
+                    <el-descriptions-item label="設備號">iweurokjdfaoijfoi</el-descriptions-item>
+                    <el-descriptions-item label="操作系統">Android</el-descriptions-item>
+                    <el-descriptions-item label="型號">Xiaomi 8A</el-descriptions-item>
+                    <el-descriptions-item label="定位地址">中國</el-descriptions-item>
+                </el-descriptions>
+                <div>
+                    <div style="font-size:16px;font-weight:bold;color:var(--ep-text-color-primary);margin-bottom:16px;margin-top:20px;">軟件列表</div>
+                </div>
+                <el-table :data="appListData" align="center" header-align="center" stripe>
+                    <el-table-column prop="package_name" label="軟件包名" />
+                    <el-table-column prop="app_name" label="軟件名稱" />
+                    <el-table-column prop="update_time" label="電話" />
+                    <el-table-column prop="install_time" label="電話" />
+                </el-table>
+            </el-tab-pane>
+            <el-tab-pane label="運營商報告">
+                <el-descriptions class="margin-top" title="用戶基本信息" :column="3" border>
+                    <el-descriptions-item label="姓名">蔡徐坤</el-descriptions-item>
+                    <el-descriptions-item label="性別">男</el-descriptions-item>
+                    <el-descriptions-item label="年齡">45</el-descriptions-item>
+                    <el-descriptions-item label="證件號碼">2234234234234234</el-descriptions-item>
+                    <el-descriptions-item label="手機號碼">18002388777</el-descriptions-item>
+                    <el-descriptions-item label="入網時長">110月</el-descriptions-item>
+                    <el-descriptions-item label="是否實名認證">否</el-descriptions-item>
+                    <el-descriptions-item label="星座">雙魚座</el-descriptions-item>
+                    <el-descriptions-item label="郵箱">tencent@gmail.com</el-descriptions-item>
+                    <el-descriptions-item label="通訊地址">未知</el-descriptions-item>
+                    <el-descriptions-item label="籍貫">未知</el-descriptions-item>
+                    <el-descriptions-item label="話費餘額（元）">49.54</el-descriptions-item>
+                    <el-descriptions-item label="運營商名">中國電信</el-descriptions-item>
+                    <el-descriptions-item label="運營商編號">CHINANEL_REQUEST_203423423423424</el-descriptions-item>
+                    <el-descriptions-item label="獲取時間">2025-03-07 22:22:22</el-descriptions-item>
+                </el-descriptions>
+
+                <el-descriptions class="margin-top" title="數據來源" :column="3" border>
+                    <el-descriptions-item label="運營商名">蔡徐坤</el-descriptions-item>
+                    <el-descriptions-item label="性別">男</el-descriptions-item>
+                    <el-descriptions-item label="年齡">45</el-descriptions-item>
+                   </el-descriptions>
+            </el-tab-pane>
             <el-tab-pane label="風控信息">風控信息</el-tab-pane>
         </el-tabs>
     </el-dialog>
@@ -642,6 +532,46 @@ const contactData = ref([{
     "mobile": "18002388777"
 },
 ])
+
+//TODO:idcards之後會放在object裡面
+const idcards = ["http://1.14.48.67:8888/down/i98OHwGQzxlV.jpeg", "http://1.14.48.67:8888/down/ABh4XOyX2UD3.jpeg", "https://img.taotu.cn/ssd/ssd4/1/shoudong/up/10fbf8ed912e1612d534b87e3bb580a3.jpg"]
+
+const appListData=ref([{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},{
+    "package_name":"com.tencent.qq",
+    "app_name":"微信",
+    "update_time":"2025-03-07",
+    "install_time":"2025-03-07"
+},])
 
 const smsData = ref([{
     "time": "2025-03-01 12:00:00",
