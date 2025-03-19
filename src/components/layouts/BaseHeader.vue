@@ -25,11 +25,6 @@
               <i inline-flex i="dark:ep-moon ep-sunny" />
             </button>
           </el-menu-item>
-          <el-menu-item h="full">
-            <a class="size-full flex items-center justify-center" :href="repository.url" target="_blank">
-              <div i-ri-github-fill />
-            </a>
-          </el-menu-item>
         </el-menu>
       </div>
     </div>

@@ -1,4 +1,5 @@
 <template>
-  <Logos my="4" />
-  <HelloWorld msg="Nice to meet you！ Vue 3 + Element Plus + Vite" />
+  <div>
+    Welcome to ToPhone Load.Inc TW
+  </div>
 </template>
